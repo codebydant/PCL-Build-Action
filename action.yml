@@ -1,5 +1,6 @@
-name: My Custom Action
+name: PCL CMake Action
 description: Action for building PCL-CMake project which depends on vtk-9/qt5
+author: Daniel T.
 
 inputs:
   build_type:
@@ -14,5 +15,5 @@ runs:
 
 # https://actions-cool.github.io/github-action-branding/
 branding:
-  icon: "tool"
+  icon: "package"
   color: "gray-dark"
