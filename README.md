@@ -60,14 +60,14 @@ The following subsystems were built:
 ```
 steps:
     - name: PCL CMake Action
-      uses: danielTobon43/PCL-CMake-Action@main
+      uses: danielTobon43/PCL-CMake-Action@v1
 ```
 
 ## Inputs
 ```
 steps:
     - name: PCL CMake Action
-      uses: danielTobon43/PCL-CMake-Action@main
+      uses: danielTobon43/PCL-CMake-Action@v1
       with:
         build_type: Release (Release, Debug, RelWithDebInfo, etc.)
 ```
