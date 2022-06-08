@@ -1,4 +1,4 @@
-name: PCL CMake Action
+name: PCL Build Action
 description: Action for building PCL-CMake project which depends on vtk-9/qt5
 author: Daniel T.
 
