@@ -12,6 +12,7 @@ runs:
   using: "docker"
   image: "Dockerfile"
 
+# https://actions-cool.github.io/github-action-branding/
 branding:
-  icon: "cloud"
-  color: "green"
+  icon: "tool"
+  color: "gray-dark"
