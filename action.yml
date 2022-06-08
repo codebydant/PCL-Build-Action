@@ -1,0 +1,17 @@
+name: My Custom Action
+description: Action for building PCL-CMake project which depends on vtk-9/qt5
+
+inputs:
+  build_type:
+    description: "Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)"
+    default: "Release"
+    required: false
+    type: string
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
+
+branding:
+  icon: "cloud"
+  color: "green"
