@@ -4,7 +4,7 @@ An action for building CMake projects that uses Point Cloud Library (`PCL`), `VT
 ## Description
 This action uses a pre-compiled [pcl-docker-alpine](https://hub.docker.com/r/danieltobon43/pcl-docker) image with aditional developer tools for compilation. 
 
-The `GITHUB_WORKSPACE` project is mount into the docker container where a cmake command compiles the project in a `build/` directory.   
+The `GITHUB_WORKSPACE` project is mounted into the docker container where a cmake command compiles the project in a `build/` directory.   
 
 **Docker Image installed libraries:**
 |     Package      |   Version      |  Description       |
