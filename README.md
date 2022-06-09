@@ -1,5 +1,5 @@
-# PCL-CMake-Action
-An action for building Point Cloud Library (`PCL`) projects that uses `CMake`, `VTK` and/or `QT` dependencies. 
+# PCL-Build-Action
+An action for building CMake projects that use Point Cloud Library (`PCL`), `VTK` and/or `QT` dependencies. 
 
 ## Description
 This action uses a pre-compiled [pcl-docker-alpine](https://hub.docker.com/r/danieltobon43/pcl-docker) image with aditional developer tools for compilation. 
@@ -59,15 +59,21 @@ The following subsystems were built:
 # Usage
 ```
 steps:
-    - name: PCL CMake Action
-      uses: danielTobon43/PCL-CMake-Action@v1
+    - name: Clone repository
+      uses: actions/checkout@v3
+      
+    - name: PCL Build Action
+      uses: danielTobon43/PCL-Build-Action@v1
 ```
 
 ## Inputs
 ```
 steps:
-    - name: PCL CMake Action
-      uses: danielTobon43/PCL-CMake-Action@v1
+    - name: Clone repository
+      uses: actions/checkout@v3
+      
+    - name: PCL Build Action
+      uses: danielTobon43/PCL-Build-Action@v1
       with:
         build_type: Release (Release, Debug, RelWithDebInfo, etc.)
 ```
