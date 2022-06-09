@@ -1,5 +1,5 @@
 # PCL-Build-Action
-An action for building CMake projects that use Point Cloud Library (`PCL`), `VTK` and/or `QT` dependencies. 
+An action for building CMake projects that uses Point Cloud Library (`PCL`), `VTK` and/or `QT` dependencies. 
 
 ## Description
 This action uses a pre-compiled [pcl-docker-alpine](https://hub.docker.com/r/danieltobon43/pcl-docker) image with aditional developer tools for compilation. 
