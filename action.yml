@@ -8,10 +8,20 @@ inputs:
     default: "Release"
     required: false
     type: string
+  build_tests:
+    description: "Enable build testing"
+    default: "false"
+    required: false
+    type: boolean
+  build_coverage:
+    description: "Enable coverage testing"
+    default: "false"
+    required: false
+    type: boolean
 
 runs:
   using: "docker"
-  image: docker://danieltobon43/pcl-docker:1.12.1-alpine3.15-All-GA-v1
+  image: docker://danieltobon43/pcl-docker:1.12.1-alpine3.15-All-GA-v2-testing
 
 # https://actions-cool.github.io/github-action-branding/
 branding:
