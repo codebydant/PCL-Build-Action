@@ -21,7 +21,8 @@ inputs:
 
 runs:
   using: "docker"
-  image: docker://danieltobon43/pcl-docker:1.12.1-alpine3.15-All-GA-v2-testing
+  # image: docker://danieltobon43/pcl-docker:1.12.1-alpine3.15-All-GA-v2-testing
+  image: "Dockerfile"
 
 # https://actions-cool.github.io/github-action-branding/
 branding:
