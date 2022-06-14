@@ -1,6 +1,9 @@
 #!/bin/sh -l
+set -e
+
 cmake -B `pwd`/build -DCMAKE_BUILD_TYPE=$INPUT_BUILD_TYPE -DBUILD_TESTING=$INPUT_BUILD_TESTS -DCODE_COVERAGE=$INPUT_BUILD_COVERAGE
-# cmake --build `pwd`/build --parallel $(nproc) --config -DCMAKE_BUILD_TYPE=$INPUT_BUILD_TYPE 
+
+# cmake --build `pwd`/build --parallel $(nproc) --config -DCMAKE_BUILD_TYPE=$INPUT_BUILD_TYPE
 make -j$(nproc) -C build/ --no-print-directory
 
 if $INPUT_BUILD_TESTS; then
