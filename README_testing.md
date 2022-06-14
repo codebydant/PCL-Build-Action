@@ -66,3 +66,27 @@ steps:
         build_tests: true
         build_coverage: true
 ```
+
+## LCOV Coverage Checker
+```
+- name: LCOV Minimum Coverage Checker
+  uses: terencetcf/github-actions-lcov-minimum-coverage-checker@v1
+  with:
+    coverage-file: coverage.info
+```
+
+## Lint clang-formatting
+```
+lint:
+    name: Formatting Check
+    runs-on: ubuntu-20.04
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run clang-format style check for C/C++/Protobuf programs.
+        uses: jidicula/clang-format-action@v4.5.0
+        with:
+          clang-format-version: "10"
+          check-path: "."
+          exclude-regex: "external"
+```
