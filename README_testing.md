@@ -53,3 +53,16 @@ tests/test_parser.cpp                     | 100%     10| 100%     1|    -      0
 
 ## ctest
 This is compatible with ctest
+
+# Usage
+```
+steps:
+    - name: Clone Repository
+      uses: actions/checkout@v3
+    
+    - name: Build, Test and Coverage
+      uses: danielTobon43/PCL-Build-Action@testing
+      with:
+        build_tests: true
+        build_coverage: true
+```
