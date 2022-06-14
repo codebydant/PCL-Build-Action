@@ -20,17 +20,22 @@ endif()
 ```
 
 ## Coverage cmake module
+
 [CodeCoverage.cmake](https://github.com/bilke/cmake-modules/blob/master/CodeCoverage.cmake)
 
 ## Dependencies
 For Alpine Linux:
+
 - sudo apk add lcov --repository=https://dl-cdn.alpinelinux.org/alpine/edge/testing
 
 ## Compiling
+
+```
 cmake .. -DCODE_COVERAGE=ON -DBUILD_TESTING=ON -DCMAKE_BUILD_TYPE=Debug
 make test
 make test -C build/
 make coverage
+```
 
 ## LCOV report
 ```
