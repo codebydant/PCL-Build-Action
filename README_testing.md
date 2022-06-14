@@ -21,12 +21,12 @@ endif()
 
 ## Coverage cmake module
 
-[CodeCoverage.cmake](https://github.com/bilke/cmake-modules/blob/master/CodeCoverage.cmake)
+[https://github.com/bilke/cmake-modules/blob/master/CodeCoverage.cmake](https://github.com/bilke/cmake-modules/blob/master/CodeCoverage.cmake)
 
 ## Dependencies
 For Alpine Linux:
 
-- sudo apk add lcov --repository=https://dl-cdn.alpinelinux.org/alpine/edge/testing
+- `sudo apk add lcov --repository=https://dl-cdn.alpinelinux.org/alpine/edge/testing`
 
 ## Compiling
 
@@ -73,6 +73,7 @@ steps:
 ```
 
 ## LCOV Coverage Checker
+https://github.com/marketplace/actions/lcov-minimum-test-coverage-checker
 ```
 - name: LCOV Minimum Coverage Checker
   uses: terencetcf/github-actions-lcov-minimum-coverage-checker@v1
@@ -81,6 +82,7 @@ steps:
 ```
 
 ## Lint clang-formatting
+https://github.com/marketplace/actions/clang-format-check
 ```
 lint:
     name: Formatting Check
