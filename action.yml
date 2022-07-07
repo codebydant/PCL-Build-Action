@@ -18,10 +18,15 @@ inputs:
     default: "false"
     required: false
     type: boolean
+  build_flags:
+    description: "Customize the CMake build flags (BUILD_TYPE, BUILD_TESTS, etc.)"
+    default: "-DCMAKE_BUILD_TYPE=Release"
+    required: false
+    type: string
 
 runs:
   using: "docker"
-  image: docker://danieltobon43/pcl-docker:1.12.1-alpine3.15-All-GA-v2-testing
+  image: docker://danieltobon43/pcl-docker:1.12.1-alpine3.15-All-GA-v3-cmakeflags
 
 # https://actions-cool.github.io/github-action-branding/
 branding:
