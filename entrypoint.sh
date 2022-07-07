@@ -8,6 +8,10 @@ cmake -B `pwd`/build $INPUT_BUILD_FLAGS
 # cmake --build `pwd`/build --parallel $(nproc) --config -DCMAKE_BUILD_TYPE=$INPUT_BUILD_TYPE
 make -j$(nproc) -C build/ --no-print-directory
 
+if $INPUT_MAKE_INSTALL; then
+  make install -C build/ --no-print-directory
+fi
+
 if $INPUT_BUILD_TESTS; then
   # make test -C build/ --no-print-directory
   ctest --output-on-failure --test-dir build

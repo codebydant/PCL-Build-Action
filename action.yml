@@ -23,6 +23,11 @@ inputs:
     default: "-DCMAKE_BUILD_TYPE=Release"
     required: false
     type: string
+  make_install:
+    description: "Enable make install in build directory"
+    default: "false"
+    required: false
+    type: boolean
 
 runs:
   using: "docker"
