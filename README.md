@@ -92,3 +92,36 @@ steps:
 To provide CMake ARGS to the build process such as: `CMAKE_CXX_COMPILER`, `CMAKE_INSTALL_PREFIX`, etc. Check the [feat-cmake-flags](https://github.com/danielTobon43/PCL-Build-Action/tree/feat-cmake-flags) branch.
 
 More information about usage, [here](https://github.com/danielTobon43/PCL-Build-Action/blob/feat-cmake-flags/README_cmakeflags.md)
+
+## Release note pcl-1.12.1
+PCL `1.12.1` has `AVX CPU` support. Make sure your development environment supports AVX instructions. If not, you must provide the `-mno-avx` flag in your CMakeLists.txt file or the appropriate flags for your application, see these posts:
+
+- [post](https://stackoverflow.com/questions/15576817/what-is-the-proper-architecture-specific-options-m-for-sandy-bridge-based-pen)
+- [post](https://stackoverflow.com/questions/58007793/using-cmake-to-make-a-library-without-sse-support-windows-version)
+
+e.g.
+```
+target_compile_options(${PROJECT_NAME} PRIVATE -Wno-cpp
+    -mmmx
+    -msse
+    -msse2
+    -msse3
+    -mssse3
+    -msse4.2
+    -msse4.1
+    -mno-sse4a
+    -mno-avx
+    -mno-avx2
+    -mno-fma
+    -mno-fma4
+    -mno-f16c
+    -mno-xop
+    -mno-bmi
+    -mno-bmi2
+    -mrdrnd
+    -mno-3dnow
+    -mlzcnt
+    -mfsgsbase
+    -mpclmul
+)
+```
