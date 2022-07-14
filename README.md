@@ -4,7 +4,15 @@ An action for building CMake projects that uses Point Cloud Library (`PCL`), `VT
 ## Description
 This action uses a pre-compiled [pcl-docker-alpine](https://hub.docker.com/r/danieltobon43/pcl-docker) image with aditional developer tools for compilation. This Action provides a Docker container environment with the installation of the Point Cloud Library (PCL), VTK, Boost, Eigen, Flann and OpenGL.
 
-The `GITHUB_WORKSPACE` repository is mounted into the docker container where a cmake command compiles the project in a `build/` directory.
+The `GITHUB_WORKSPACE` repository is mounted into the docker container where a cmake command compiles the project in a `build/` directory. After the compiling process is done, the build folder remain in the `GITHUB_WORKSPACE` repository.
+
+**Note:**
+This action assumes that the main `CMakeLists.txt` file is located at the top level (root) of the repository.
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/35694200/178979970-8d36f51b-5ea5-4206-9aac-eeb0d914eef8.png" alt="Sublime's custom image"/>
+</p>
+
 
 **Docker Image installed libraries:**
 |     Package      |   Version      |  Description       |
@@ -81,4 +89,4 @@ steps:
 ## Customization
 To provide CMake ARGS to the build process such as: `CMAKE_CXX_COMPILER`, `CMAKE_INSTALL_PREFIX`, etc. Check the [feat-cmake-flags](https://github.com/danielTobon43/PCL-Build-Action/tree/feat-cmake-flags) branch.
 
-More information about usage, please check [here](https://github.com/danielTobon43/PCL-Build-Action/blob/feat-cmake-flags/README_cmakeflags.md)
+More information about usage, [here](https://github.com/danielTobon43/PCL-Build-Action/blob/feat-cmake-flags/README_cmakeflags.md)
